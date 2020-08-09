@@ -11,45 +11,6 @@ class _SignUpScreenPageState extends State<SignUpScreen> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
   bool isChecked = false;
-  UtilsFunctions utilsFunctions;
-
-  Route _createRoute() {
-    return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => LoginNow(),
-
-      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-//        var begin = Offset(0.0, 1.0);
-        var begin = Offset(1.0, 1.0); //animation From bottmo Curve
-//        var begin = Offset(1.0, 0.0); //animation From left like android
-        var end = Offset.zero;
-        var tween = Tween(begin: begin, end: end);
-        var offsetAnimation = animation.drive(tween);
-
-        return SlideTransition(
-          position: offsetAnimation,
-          child: child,
-        );
-      },
-
-      // animation from Bottom
-//      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-//        return child;
-//      },
-
-//      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-//        var begin = Offset(0.0, 1.0);
-//        var end = Offset.zero;
-//        var curve = Curves.ease;
-//
-//        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-//
-//        return SlideTransition(
-//          position: animation.drive(tween),
-//          child: child,
-//        );
-//      },
-    );
-  }
 
 
   @override
@@ -268,7 +229,7 @@ class _SignUpScreenPageState extends State<SignUpScreen> {
             onTap: (){
 
 //              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginNow()),
-                Navigator.of(context).push(_createRoute());
+                Navigator.of(context).push(createRoute(LoginNow()));
 //                Navigator.of(context).push(UtilsFunctions().);
             },
           )

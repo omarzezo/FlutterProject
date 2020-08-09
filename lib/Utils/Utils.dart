@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:blocpattern/Utils/Utils.dart';
 
 
- class UtilsFunctions {
-
-  Route _createRoute(Widget Function() page) {
+  Route createRoute(Object page) {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => page(),
+      pageBuilder: (context, animation, secondaryAnimation) => page,
 
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
 //        var begin = Offset(0.0, 1.0);
@@ -41,7 +39,8 @@ import 'package:blocpattern/Utils/Utils.dart';
 //      },
     );
   }
-}
+
+
 final String X2 = "@2x";
 final String X3 = "@3x";
 

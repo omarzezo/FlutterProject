@@ -1,3 +1,4 @@
+import 'package:blocpattern/Utils/Utils.dart';
 import 'package:blocpattern/ui/screens/LoginNow/LoginNow.dart';
 import 'package:blocpattern/ui/screens/signUp/SignUpScreen.dart';
 import 'package:flutter/material.dart';
@@ -9,44 +10,6 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenPageState extends State<WelcomeScreen> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
-
-  Route _createRoute(Object page) {
-    return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => page,
-
-      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-//        var begin = Offset(0.0, 1.0);
-        var begin = Offset(1.0, 1.0); //animation From bottmo Curve
-//        var begin = Offset(1.0, 0.0); //animation From left like android
-        var end = Offset.zero;
-        var tween = Tween(begin: begin, end: end);
-        var offsetAnimation = animation.drive(tween);
-
-        return SlideTransition(
-          position: offsetAnimation,
-          child: child,
-        );
-      },
-
-      // animation from Bottom
-//      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-//        return child;
-//      },
-
-//      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-//        var begin = Offset(0.0, 1.0);
-//        var end = Offset.zero;
-//        var curve = Curves.ease;
-//
-//        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-//
-//        return SlideTransition(
-//          position: animation.drive(tween),
-//          child: child,
-//        );
-//      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -158,7 +121,7 @@ class _WelcomeScreenPageState extends State<WelcomeScreen> {
                     borderRadius: BorderRadius.circular(4.0),
                   ),
                   onPressed: () {
-                    Navigator.of(context).push(_createRoute(SignUpScreen()));
+                    Navigator.of(context).push(createRoute(SignUpScreen()));
 //                    Navigator.push(
 //                      context,
 //                      MaterialPageRoute(builder: (context) => SignUpScreen()),
@@ -216,7 +179,7 @@ class _WelcomeScreenPageState extends State<WelcomeScreen> {
                 )
             ),
             onTap: () {
-              Navigator.of(context).push(_createRoute(LoginNow()));
+              Navigator.of(context).push(createRoute(LoginNow()));
 //              Navigator.push(
 //                context,
 //                MaterialPageRoute(builder: (context) => LoginNow()),
