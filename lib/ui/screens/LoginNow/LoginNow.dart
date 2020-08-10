@@ -176,7 +176,7 @@ class _LoginNowPageState extends State<LoginNow> {
                     ),
                     onPressed: () {
 //                      Navigator.of(context).push(_createRoute(HomeScreen()));
-                      Navigator.of(context).push(createRoute(HomeScreen));
+                      Navigator.of(context).push(createRoute(HomeScreen()));
 //                      Navigator.push(
 //                        context,
 //                        MaterialPageRoute(builder: (context) => HomeScreen()),
