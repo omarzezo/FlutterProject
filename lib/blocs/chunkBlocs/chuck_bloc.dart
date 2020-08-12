@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:blocpattern/Model/chunk/chuck_response.dart';
 import 'package:blocpattern/network/Repsonse.dart';
-import 'package:blocpattern/repository/chuck_repository.dart';
+import 'file:///D:/omarProjects2020/FlutterProjects/bloc_pattern/bloc_pattern/lib/repository/chunkRepository/chuck_repository.dart';
 
 
 class ChuckBloc {

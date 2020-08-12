@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:blocpattern/Model/chunk/chuck_categories.dart';
 import 'package:blocpattern/network/Repsonse.dart';
-import 'package:blocpattern/repository/chuck_category_repository.dart';
+import 'file:///D:/omarProjects2020/FlutterProjects/bloc_pattern/bloc_pattern/lib/repository/chunkRepository/chuck_category_repository.dart';
 
 
 class ChuckCategoryBloc {
