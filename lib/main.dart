@@ -4,6 +4,7 @@ import 'package:blocpattern/ui/screens/Login/LoginPage.dart';
 import 'package:blocpattern/ui/screens/Login/LoginPage2.dart';
 import 'package:blocpattern/ui/screens/LoginNow/LoginNow.dart';
 import 'package:blocpattern/ui/screens/Welcome/welcomeScreen.dart';
+import 'package:blocpattern/ui/screens/chunk/chuck_categories_view.dart';
 import 'package:blocpattern/ui/screens/signUp/SignUpScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:blocpattern/ui/screens/counter/counter_screen.dart';
@@ -43,7 +44,13 @@ class MyApp extends StatelessWidget {
 //      home: CounterScreen(),
 //      home: LoginPage(),
 //      home: LoginPage2(),
+
       home: WelcomeScreen(),
+
+
+//      home:GetChuckCategories(),
+
+
 //      home: LoginNow(),
 //      home: SignUpScreen(),
 //      home: HomeScreen(),

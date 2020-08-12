@@ -1,7 +1,10 @@
+import 'package:blocpattern/Utils/LoaderClass.dart';
 import 'package:blocpattern/Utils/Utils.dart';
+import 'package:blocpattern/Utils/showcase.dart';
 import 'package:blocpattern/ui/screens/LoginNow/LoginNow.dart';
 import 'package:blocpattern/ui/screens/signUp/SignUpScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -13,6 +16,9 @@ class _WelcomeScreenPageState extends State<WelcomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+
+
 
     final welcomeText = Text(
       'Welcome',
@@ -179,7 +185,19 @@ class _WelcomeScreenPageState extends State<WelcomeScreen> {
                 )
             ),
             onTap: () {
-              Navigator.of(context).push(createRoute(LoginNow()));
+              Loader().showAppLoading(context);
+//              onLoading(context);
+//                   loading.onload();
+//              Navigator.of(context).push(createRoute(LoginNow()));
+
+//              Navigator.push(
+//                context,
+//                MaterialPageRoute<void>(
+//                  builder: (BuildContext context) => ShowCase(),
+//                  fullscreenDialog: true,
+//                ),
+//              );
+
 //              Navigator.push(
 //                context,
 //                MaterialPageRoute(builder: (context) => LoginNow()),
@@ -219,6 +237,8 @@ class _WelcomeScreenPageState extends State<WelcomeScreen> {
                 Container(height:40),
                 signUpBtn,
                 Container(height:10),
+                //_saving?modal:Container(),
+
                 twoTexts,
 //                SizedBox(
 //                  height: 155.0,

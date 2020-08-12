@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:blocpattern/Utils/Utils.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 
   Route createRoute(Object page) {
@@ -39,6 +40,8 @@ import 'package:blocpattern/Utils/Utils.dart';
 //      },
     );
   }
+
+
 
 
 final String X2 = "@2x";
@@ -418,35 +421,8 @@ buildSearchAppbar(String title, BuildContext context) => AppBar(
   ],
 );
 
-bool isDialogShowing = false;
 
-void showAppLoading(BuildContext context, {String msg}) {
-  showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (ctx) => new Dialog(
-        backgroundColor: Colors.transparent,
-        child: new Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-//            msg != null
-//                ? Text(msg, style: AqarFont.baseFontStyle()
-//            )
-//                : Container(),
-            RefreshProgressIndicator(
-              valueColor:
-              new AlwaysStoppedAnimation<Color>(Colors.teal),
-            ),
-          ],
-        ),
-      ));
-  isDialogShowing = true;
-}
 
-void hideAppDialog(BuildContext context) {
-  Navigator.of(context, rootNavigator: true).pop('dialog');
-  isDialogShowing = false;
-}
 
 //String L(String word, BuildContext context) {
 //  if (context != null) {
@@ -607,7 +583,7 @@ showInputDialog (
                                     fontFamily: "Tajawal")),
                                 onPressed: () {
                                   onInputChanged(textKey.currentState.value);
-                                  hideAppDialog(context);
+//                                  hideAppDialog(context);
                                 },
                                 shape: RoundedRectangleBorder(
                                     borderRadius: new BorderRadius.circular(10.0)),
@@ -631,7 +607,7 @@ showInputDialog (
                                       color: Colors.teal,
                                       fontFamily: "Tajawal")),
                               onPressed: () {
-                                hideAppDialog(context);
+//                                hideAppDialog(context);
                                 onCancel();
                               },
                             ),
